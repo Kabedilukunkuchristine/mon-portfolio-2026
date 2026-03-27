@@ -23,7 +23,7 @@ body{
 
 header{
     background-color: white;
-    box-shadow: 2px 6px 10px rgba(0,0,0,0.200);
+    box-shadow: 2px 6px 10px rgba(0,0,0,0.5);
     position:sticky;
     top: 0;
     z-index: 100;
@@ -140,15 +140,15 @@ a.active::after{
     text-align: centre;
 }
 
-section h2{
+section.apropos h2{
     color: var(--violet-doux);
     font-size: 2.6rem;
-    font-weight: 700px;
+    font-weight: 700;
     position: relative;
     text-align: center;
-}j
+}
 
-section h2 ::after{
+section h2::after {
     content: '';
     display: block;
     width: 60px;
@@ -163,4 +163,86 @@ section h2 ::after{
     color: var(--gris-fonce);
     font-size: 1.3rem;
 }
+section.competence h2 {
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
 
+section.competence h2::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+
+.competence table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.competence table th, .competence table td {
+    padding: 15px;
+}
+
+.competence table thead {
+    background-color: var(--violet-doux);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.competence table tbody td {
+    /* ajouter une bordure de 1px en bas de chaque cellule*/
+    border-bottom: 1x solid var(--gris-clair);
+}
+
+.competence table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.competence table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.competence table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.competence table thead th{
+    text-align: left;
+}
+
+footer {
+    margin-top: 3rrem;
+    background-color: var(--violet-doux);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+footer a {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease,transform 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--orange-vif);
+    transform: translateY(-3px);
+}
