@@ -12,7 +12,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 body{
@@ -23,7 +23,7 @@ body{
 
 header{
     background-color: white;
-    box-shadow: 2px 6px 10px rgba(0,0,0,0.5);
+    box-shadow: 2px 6px 10px rgba(0,0,0,0.200);
     position:sticky;
     top: 0;
     z-index: 100;
@@ -33,10 +33,10 @@ header{
     padding: 2rem 3rem;
 }
 
-header div a{
+header div a {
     text-decoration: none;
     font-size: 2.2rem;
-    font-weight: bold;
+    font-weight: hold;
     color: var(--violet-doux);
 }
 
@@ -49,36 +49,36 @@ ul{
      display: flex;
 }
 
-ul li a{
+ul li a {
     text-decoration:none ;
-    color:var(--gris-tres-fonce);
+    color: var(--gris-fonce);
     font-weight: 600;
     font-size: 1.1rem;
     position: relative;
-    padding: 10px 0;
-    
+    padding: 30px 0;  
 }
 
 ul li a:hover{
-    color:var(--violet-doux)
+    color: var(--violet-doux)
 }
 
-ul li a::after{
+ul li a.active::after{
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 0;
+    display: block;
+    width: 60px;
     background-color: var(--violet-doux);
-    transition:whidth 0.3s ease;
+    transition: 0.3s ease;
 }
 
 ul li a:hover::after{
     width: 100%;
 }
 a.active{
-    color:var(--violet-doux);
+    color: var(--violet-doux);
 }
 
 a.active::after{
@@ -121,14 +121,45 @@ a.active::after{
     background-color: var(--violet-doux);
     color: white;
     padding: 15px 30px;
-    border-radius: 25px;
+    border-radius: 50px;
     text-transform: uppercase;
     letter-spacing: 1.1px;
     font-weight: 600px;
     margin-top: 1rem;
+    transition: background-color 0.35 ease,transform 0.25 ease;
 }
 
-.hero a:hover{
+.hero a:hover {
     background-color: var(--violet-fonce);
     transform: translateY(-3px);
+}
+
+.apropos{
+    width: 800px;
+    margin: 6rem auto;
+    text-align: centre;
+}
+
+section h2{
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700px;
+    position: relative;
+    text-align: center;
+}j
+
+section h2 ::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+
+.apropos p{
+    margin-bottom: 2rem;
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
 }
