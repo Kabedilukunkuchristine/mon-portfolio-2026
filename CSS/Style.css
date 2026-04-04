@@ -59,7 +59,9 @@ ul li a {
 }
 
 ul li a:hover{
-    color: var(--violet-doux)
+    color: var(--violet-doux);
+    border-bottom: 2px solid var(--violet-doux) ;
+    transition: 0.5s ease;
 }
 
 ul li a.active::after{
